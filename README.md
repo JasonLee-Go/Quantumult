@@ -12,6 +12,11 @@
     * Quantumult的策略组都是什么含义？
     * Quantumult不用策略组能用节点测速么？
 * [3.基础配置方式](#基础配置方式)
+	 * 添加节点
+	 * 订阅及更新节点
+	 * 订阅及更新规则
+	 * 订阅及更新Rejection
+	 * 开启MitM
     
 ---
 
@@ -106,5 +111,6 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 
 * 初次打开Quantumult所显示的页面
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.PNG)
+
 
 
