@@ -112,5 +112,7 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 * 初次打开Quantumult所显示的页面
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.PNG)
 
+* 添加节点
+	 * 手动添加节点
 
 
