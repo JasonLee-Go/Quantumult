@@ -42,6 +42,8 @@ Quantumult内置了规则订阅机制，可以方便的订阅规则，可以在�
 
 Quantumult支持多组策略，可以实现多组分流共存，手动选择策略组出站模式。
 
+Quantumult支持UDP Relay 及 UDP代理转发,有玩外服手游的小伙伴应该知道这个功能的重要性。
+
 至于为什么要买，这个就看个人需求吧。
 
 * Q：Quantumult的规则为何和其它的工具不一样，应该怎么理解规则中的关键字？
@@ -151,19 +153,19 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 
    如果想要添加SSR节点,请点击图中的红色方框标识处,点击后会弹出如下界面
 
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.JPG)
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.jpg)
 
    点击OK进入SSR手动添加界面 点击Cancel留在本页面
 
    添加SSR节点界面如下图
 
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.JPG)
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.jpg)
 
    从上往下分别为 接点名 服务器地址 端口号 密码 加密方式 协议类型 混淆类型 协议参数 混淆参数 请根据自己的节点情况自行填写,填写完毕后点击Save保存。
 
+* 订阅节点信息 规则列表 Https Rejection 
    
-    
-
+   添加节点请选择Settings界面 Favorites选项 如下图所示
     
 
 
