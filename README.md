@@ -10,13 +10,13 @@
     * Quantumult的规则为何和其它的工具不一样，应该怎么理解规则中的关键字？
     * Quantumult内置的基本策略有什么，出站方式有什么？
     * Quantumult的策略组都是什么含义？
-    * Quantumult不用策略组能用节点测速么？
+    * Quantumult不用策略组能用节点测速么？
 * [3.基础配置方式](#基础配置方式)
-	 * 添加节点
-	 * 订阅及更新节点
-	 * 订阅及更新规则
-	 * 订阅及更新Rejection
-	 * 开启MitM
+    * 添加节点
+    * 订阅及更新节点
+    * 订阅及更新规则
+    * 订阅及更新Rejection
+    * 开启MitM
     
 ---
 
@@ -95,7 +95,7 @@ DIRECT：全部出站流量走直接连接，不管你规则怎么写都会走�
 
 A：Service Set Identifier Policy：此组可以给Wi-Fi和流量指定不同的策略(可以是静态策略，也可以是节点测速)或节点或者内置基础策略(PROXY DIRECT REJECT)。也可以针对不同的Wi-Fi SSID名称指定不同配置方式。
 
-Latency Policy：此组是节点测速分组，可以选择多个节点，根据测速结果选择最优节点使用。
+Latency Policy：此组是节点测速分组，可以选择多个节点，根据测速结果选择ping值最低的节点使用(注意Latency Policy并不能检测节点带宽,只能检测节点ping值,建立此组时请根据自身节点实际情况自行添加)。
 
 Static Policy：此组是静态策略分组，可以选择 SSID分组 Auto分组或者任意节点，也可以选择内置基础策略(PROXY DIRECT REJECT)。使用时，手动选择需要的策略即可。
 
@@ -109,10 +109,62 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 
 ### 基础配置方式
 
-* 初次打开Quantumult所显示的页面
+* 首页 
+
+   初次打开Quantumult所显示的页面
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.PNG)
 
+**本页面各选项卡说明**
+
+    Home (主页面 显示连接状态 连接时间 流量使用情况 节点信息等信息)
+    Settings (设定页面 添加节点 订阅设定 规则列表 UDP Relay等)
+    Statistics (状态显示页面 显示浏览历史 详细流量使用情况 策略组状态 服务器延迟统计等)
+    More (更多选项 显示其它信息 联系作者 备份 辅助设定等)
+
 * 添加节点
-	 * 手动添加节点
+	 
+   添加节点共有4种方式 扫码添加 URL添加 手动添加 节点订阅
+
+   本结只讲前三种方式,节点订阅放于订阅界面说明。
+
+   添加节点请选择Settings界面 Server选项 如下图所示
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2844.JPG)
+
+   在Server页面有三种添加节点的方式 下图中红色方框标识的为手动添加 蓝色方框标识的未二维码扫码导入 绿色方框标识的为从URL导入
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2854.JPG)
+
+   本节主要讲手动添加节点,二维码扫码和URL添加方式相对简单,就不再介绍了。
+
+   **通过URL添加节点的时候可以一次导入多个节点,如果你的服务商提供了多节点导入连接,那么你可以用URL一次添加所有节点。**
+   
+   选择手动添加选项会弹出下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.JPG)
+
+   默认为添加SS节点 
+
+   从上往下分别为 接点名 服务器地址 端口号 密码 加密方式 请根据自己的节点情况自行填写,填写完毕后点击Save保存。
+   
+   图中蓝色方框为开启SS节点 obfs的开关,如果有需要请自行开启。
+
+   如果想要添加SSR节点,请点击图中的红色方框标识处,点击后会弹出如下界面
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.JPG)
+
+   点击OK进入SSR手动添加界面 点击Cancel留在本页面
+
+   添加SSR节点界面如下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.JPG)
+
+   从上往下分别为 接点名 服务器地址 端口号 密码 加密方式 协议类型 混淆类型 协议参数 混淆参数 请根据自己的节点情况自行填写,填写完毕后点击Save保存。
+
+   
+    
+
+    
+
 
 
