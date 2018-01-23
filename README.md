@@ -113,6 +113,7 @@ Static Policy：此组是静态策略分组，可以选择 SSID分组 Auto分组
 A：可以，Quantumult提供了简易的测速机制，可以在不使用策略组的情况下开启最多10个节点测速并选择最优节点使用。开启方式在Settings→Policy→PROXY→URL Latency Test中配置。这种方式规则中需要走节点服务器的网址配置为PROXY即可，这种配置方式相对简单能满足大部分人的需求，如果不想开启策略组或者对策略组不是很了解的人，推荐使用这种配置方式。
 
 * Q:为什么我Quantumult点击启动时会有提示?
+
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2923.JPG)
 
 A:这个提示是因为你没有信任证书,可以参考本手册的 **开启MitM(HTTPS)** 章节开启证书信任.
