@@ -11,6 +11,7 @@
     * Quantumult内置的基本策略有什么，出站方式有什么？
     * Quantumult的策略组都是什么含义？
     * Quantumult不用策略组能用节点测速么？
+    * 为什么我Quantumult点击启动时会有提示?
 * [3.基础配置方式](#基础配置方式)
     * 添加节点
     * 订阅及更新节点
@@ -28,7 +29,11 @@
     
 如果你使用中有疑问可以请教别人，也可以发issue邮件给作者。但是还是推荐你先自己琢磨一下，没准问题就解决了。
 
-**`注意：本文撰写时是使用的TestFlight版本Build393，如果跟你手上的版本不一样请等待商店正式版`**
+作者邮箱 [quantumult@gmail.com](quantumult@gmail.com) 有问题反馈可以给作者发邮件.
+
+申请TF需要附上购买收据,并在邮件标题注明申请TF。
+
+**`注意：本文撰写时是使用的TestFlight版本Build400，如果跟你手上的版本不一样请等待商店正式版`**
 
 ---
 
@@ -107,6 +112,12 @@ Static Policy：此组是静态策略分组，可以选择 SSID分组 Auto分组
 
 A：可以，Quantumult提供了简易的测速机制，可以在不使用策略组的情况下开启最多10个节点测速并选择最优节点使用。开启方式在Settings→Policy→PROXY→URL Latency Test中配置。这种方式规则中需要走节点服务器的网址配置为PROXY即可，这种配置方式相对简单能满足大部分人的需求，如果不想开启策略组或者对策略组不是很了解的人，推荐使用这种配置方式。
 
+* Q:为什么我Quantumult点击启动时会有提示?
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2923.JPG)
+
+A:这个提示是因为你没有信任证书,可以参考本手册的 **开启MitM(HTTPS)** 章节开启证书信任.
+还有一种提示是没有安装证书,同样可以在 **开启MitM(HTTPS)** 章节中找到答案.
+
 ---
 
 ### 基础配置方式
@@ -133,7 +144,7 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2844.JPG)
 
-   在Server页面有三种添加节点的方式 下图中红色方框标识的为手动添加 蓝色方框标识的未二维码扫码导入 绿色方框标识的为从URL导入
+   在Server页面有三种添加节点的方式 下图中红色方框标识的为手动添加 蓝色方框标识的为二维码扫码导入 绿色方框标识的为从URL导入
 
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2854.JPG)
 
@@ -143,7 +154,7 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
    
    选择手动添加选项会弹出下图
 
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.JPG)
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.jpg)
 
    默认为添加SS节点 
 
@@ -166,7 +177,156 @@ A：可以，Quantumult提供了简易的测速机制，可以在不使用策略
 * 订阅节点信息 规则列表 Https Rejection 
    
    添加节点请选择Settings界面 Favorites选项 如下图所示
-    
 
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2912.JPG)
+
+   点击图中红色方框标识处会弹出选项,选择需要添加的订阅信息
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2910.JPG)
+
+   图中绿色方框标出的为添加节点订阅信息 蓝色方框标出的为添加基本规则订阅 红色方框标出的为HTTPS Rejection规则订阅
+
+    节点信息订阅 点击Server选项弹出如下画面
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2914.JPG)
+
+   图中 Name填写名字自己随便填写方便识别即可 URL填写节点订阅链接(请咨询你的服务商)
+
+   下方的三个可选框的做用
+
+    Update Option 如果勾选该选项,在更新节点信息时只会更新本地已经添加的节点,新的节点信息不会被更新进来
+
+    Delete Option 如果勾选该选项,在更新节点信息时如果服务器已经将某些节点删除那么本地节点也会被删除
+
+    Additional Option 如果勾选该选项,在更新节点信息时,不会更新本地节点名称
+    
+   **本页推荐只勾选Delete Option选项其它保持原样不变**
+
+   添加完毕后点击Save保存.
+
+   保存完毕后,在Favorites页面会出现你刚才命名过的节点订阅信息,在订阅信息上向左滑动会有如下提示
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2899.JPG)
+
+   图中Remove Server为从本地移除该组订阅的所有节点信息 Update为更新或添加节点订阅 Delete为删除本条订阅(删除本条订阅不会删除已经订阅的节点信息)
+
+   选择Update订阅节点信息,成功后会弹出如下提示,至此节点订阅完成.
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)
+
+    基础规则订阅 点击Filter选项弹出如下画面
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2915.JPG)
+
+   图中 Name填写订阅名称方便识别即可 URL添加规则地址
+
+   下方复选框作用
+    
+    Filter Action替换提示说明
+    如果你的规则支持Quantumult的替换说明,那么勾选后在应用时会弹出说明,方便分流处理.
+
+   **本页推荐勾选 Filter Action选项**
+
+   推荐订阅规则地址 
+[https://raw.githubusercontent.com/lhie1/Surge/master/Quantumult.conf](https://raw.githubusercontent.com/lhie1/Surge/master/Quantumult.conf)
+
+   添加完毕后点击Save保存.
+
+   保存完毕后,在Favorites页面会出现你刚才命名过的规则订阅信息,在订阅信息上向左滑动会有如下提示
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2909.JPG)
+
+   图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
+   
+   选择Replace会弹出如下图片
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2913.JPG)
+
+   图中选项请根据自己的实际情况选择,选择好后点击OK,至此基础规则添加完毕.
+
+    HTTPS Rejection订阅 点击Rejection选项弹出如下画面
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2916.JPG)
+
+   图中 Name填写订阅名称方便识别即可 URL添加规则地址
+
+   下方复选框作用
+
+    Including Host Names 添加Rejection规则时同时添加Host Name 列表(如果你订阅的Rejection列表包含Host Name)
+
+   **本页推荐勾选 Including Host Names**
+
+   推荐订阅Rejection地址 
+[https://raw.githubusercontent.com/lhie1/Surge/master/Quantumult_URL.conf](https://raw.githubusercontent.com/lhie1/Surge/master/Quantumult_URL.conf)
+
+   添加完毕后点击Save保存.
+
+   保存完毕后,在Favorites页面会出现你刚才命名过的Rejection订阅信息,在订阅信息上向左滑动会有如下提示
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2908.JPG)
+
+   图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
+   
+   选择Replace 完成后会弹出如下图片,至此Rejection订阅完毕.
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)    
+
+* 开启MitM(HTTPS)
+
+   选择Settings页面的HTTPS选项卡下图红色方框标出部分
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2839.JPG) 
+
+   选择后会弹出如下画面
+
+未创建证书如下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2920.JPG)
+
+已创建未安装证书如下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2919.JPG)
+
+已安装未信任证书如下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2921.JPG)
+
+已安装证书并信任如下图
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2867.JPG)
+
+   图中红色方框标识处显示当前是否安装并信任了HTTPS证书,我的这个已经安装过了显示的是Root CA Installed&Trusted. 如果是没有安装的话这个地方显示不太一样,下面我讲一下如何安装和信任证书.
+
+   未创建证书的用户需要先创建证书
+
+   首先点击图中蓝色方框标识出的位置(Generate Key&Root Certificate),创建一个新的证书(如果你已经有Surge的证书不想创建新的证书也可以,后面我会讲如何使用Suege的证书.)
+   
+   然后点击Install CA Root按照系统提示操作安装证书
+
+   如果你已经创建了证书直接安装证书即可
+
+   信任证书 依次点击手机设置 通用 关于本机 证书信任设置 选择你的证书信任即可
+
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2922.JPG)
+
+**注意如果你已经创建了证书并安装,请不要再次点击创建证书,重新创建一个证书原来的证书会失效**
+
+    如何使用Surge已经信任过的证书
+
+    使用Surge已经信任过的证书可以在系统中少创建一个证书,具体操作流程如下
+
+    点击P12-passphraes复制Surge证书的ca-passphraes编号到这里
+
+   ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2917.JPG)
+
+    然后点击P12复制Surge证书的ca-p12到这里
+
+   ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG)
+   
+
+   
+
+
+    
 
 
