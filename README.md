@@ -114,9 +114,7 @@
 
 * **Q**:为什么我Quantumult点击启动时会有提示?
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2923.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2923.JPG"/></div>
 
    **A**:这个提示是因为你没有信任证书,可以参考本手册的 **开启MitM(HTTPS)** 章节开启证书信任.
    还有一种提示是没有安装证书,同样可以在 **开启MitM(HTTPS)** 章节中找到答案.
@@ -128,9 +126,9 @@
 * 首页 
 
    初次打开Quantumult所显示的页面
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.JPG)
-</center>
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.JPG"/></div>
+
 
 **本页面各选项卡说明**
 
@@ -147,15 +145,11 @@
 
    添加节点请选择Settings界面 Server选项 如下图所示
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2844.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2844.JPG"/></div>
 
    在Server页面有三种添加节点的方式 下图中红色方框标识的为手动添加 蓝色方框标识的为二维码扫码导入 绿色方框标识的为从URL导入
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2854.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2854.JPG"/></div>
 
    本节主要讲手动添加节点,二维码扫码和URL添加方式相对简单,就不再介绍了。
 
@@ -163,9 +157,7 @@
    
    选择手动添加选项会弹出下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.jpg)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.JPG"/></div>
 
    默认为添加SS节点 
 
@@ -175,17 +167,13 @@
 
    如果想要添加SSR节点,请点击图中的红色方框标识处,点击后会弹出如下界面
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.jpg)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.JPG"/></div>
 
    点击OK进入SSR手动添加界面 点击Cancel留在本页面
 
    添加SSR节点界面如下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.jpg)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.JPG"/></div>
 
    从上往下分别为 接点名 服务器地址 端口号 密码 加密方式 协议类型 混淆类型 协议参数 混淆参数 请根据自己的节点情况自行填写,填写完毕后点击Save保存。
 
@@ -193,23 +181,17 @@
    
    添加节点请选择Settings界面 Favorites选项 如下图所示
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2912.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2912.JPG"/></div>
 
    点击图中红色方框标识处会弹出选项,选择需要添加的订阅信息
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2910.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2910.JPG"/></div>
 
    图中绿色方框标出的为添加节点订阅信息 蓝色方框标出的为添加基本规则订阅 红色方框标出的为HTTPS Rejection规则订阅
 
     节点信息订阅 点击Server选项弹出如下画面
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2914.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2914.JPG"/></div>
 
    图中 Name填写名字自己随便填写方便识别即可 URL填写节点订阅链接(请咨询你的服务商)
 
@@ -227,23 +209,17 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的节点订阅信息,在订阅信息上向左滑动会有如下提示
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2899.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2899.JPG"/></div>
 
    图中Remove Server为从本地移除该组订阅的所有节点信息 Update为更新或添加节点订阅 Delete为删除本条订阅(删除本条订阅不会删除已经订阅的节点信息)
 
    选择Update订阅节点信息,成功后会弹出如下提示,至此节点订阅完成.
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG"/></div>
 
     基础规则订阅 点击Filter选项弹出如下画面
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2915.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2915.JPG"/></div>
 
    图中 Name填写订阅名称方便识别即可 URL添加规则地址
 
@@ -261,25 +237,19 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的规则订阅信息,在订阅信息上向左滑动会有如下提示
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2909.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2909.JPG"/></div>
 
    图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
    
    选择Replace会弹出如下图片
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2913.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2913.JPG"/></div>
 
    图中选项请根据自己的实际情况选择,选择好后点击OK,至此基础规则添加完毕.
 
     HTTPS Rejection订阅 点击Rejection选项弹出如下画面
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2916.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2916.JPG"/></div>
 
    图中 Name填写订阅名称方便识别即可 URL添加规则地址
 
@@ -296,51 +266,37 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的Rejection订阅信息,在订阅信息上向左滑动会有如下提示
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2908.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2908.JPG"/></div>
 
    图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
    
    选择Replace 完成后会弹出如下图片,至此Rejection订阅完毕.
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)    
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG"/></div>
 
 * 开启MitM(HTTPS)
 
    选择Settings页面的HTTPS选项卡下图红色方框标出部分
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2839.JPG) 
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2839.JPG"/></div>
 
    选择后会弹出如下画面
 
 未创建证书如下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2920.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2920.JPG"/></div>
 
 已创建未安装证书如下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2919.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2919.JPG"/></div>
 
 已安装未信任证书如下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2921.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2921.JPG"/></div>
 
 已安装证书并信任如下图
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2867.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2867.JPG"/></div>
 
    图中红色方框标识处显示当前是否安装并信任了HTTPS证书,我的这个已经安装过了显示的是Root CA Installed&Trusted. 如果是没有安装的话这个地方显示不太一样,下面我讲一下如何安装和信任证书.
 
@@ -354,9 +310,7 @@
 
    信任证书 依次点击手机设置 通用 关于本机 证书信任设置 选择你的证书信任即可
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2922.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2922.JPG"/></div>
 
 **注意如果你已经创建了证书并安装,请不要再次点击创建证书,重新创建一个证书原来的证书会失效**
 
@@ -366,19 +320,10 @@
 
     点击P12-passphraes复制Surge证书的ca-passphraes编号到这里
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2917.JPG)
-</center>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2917.JPG"/></div>
 
     然后点击P12复制Surge证书的ca-p12到这里
 
-<center>
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG)
-</center>   
-
-   
-
-
-    
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG"/></div>
 
 
