@@ -126,7 +126,7 @@ A:这个提示是因为你没有信任证书,可以参考本手册的 **开启Mi
 * 首页 
 
    初次打开Quantumult所显示的页面
-![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.PNG)
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.JPG)
 
 **本页面各选项卡说明**
 
