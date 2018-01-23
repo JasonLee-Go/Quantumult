@@ -39,85 +39,87 @@
 
 ### FAQ
 
- **Q**：Quantumult有什么优势，我有其它工具为什么要买这个？
+* **Q**：Quantumult有什么优势，我有其它工具为什么要买这个？
 
- **A**：Quantumult稳定性不错，不输于任何其它同类软件。
+    **A**：Quantumult稳定性不错，不输于任何其它同类软件。
 
- Quantumult内置了规则订阅机制，可以方便的订阅规则，可以在导入规则的时候完成快速更改分流策略并且不需要借助其它工具（前提是规则配置支持此项操作）。
+    Quantumult内置了规则订阅机制，可以方便的订阅规则，可以在导入规则的时候完成快速更改分流策略并且不需要借助其它工具（前提是规则配置支持此项操作）。
 
- Quantumult支持多组策略，可以实现多组分流共存，手动选择策略组出站模式。
+    Quantumult支持多组策略，可以实现多组分流共存，手动选择策略组出站模式。
 
- Quantumult支持UDP Relay 及 UDP代理转发,有玩外服手游的小伙伴应该知道这个功能的重要性。
+    Quantumult支持UDP Relay 及 UDP代理转发,有玩外服手游的小伙伴应该知道这个功能的重要性。
 
- 至于为什么要买，这个就看个人需求吧。
+    至于为什么要买，这个就看个人需求吧。
 
- **Q**：Quantumult的规则为何和其它的工具不一样，应该怎么理解规则中的关键字？
+* **Q**：Quantumult的规则为何和其它的工具不一样，应该怎么理解规则中的关键字？
 
- **A**：Quantumult的规则关键字其实本质的含义还是和其它工具类似的，我这里列举一下大家可以看一下。
+    **A**：Quantumult的规则关键字其实本质的含义还是和其它工具类似的，我这里列举一下大家可以看一下。
 
- HOST等同于DOMAIN ：匹配请求的域名
+    HOST等同于DOMAIN ：匹配请求的域名
 
- 例如：HOST，instagram.com，Proxy 匹配instagram.com的域名，走代理。
+    例如：HOST，instagram.com，Proxy 匹配instagram.com的域名，走代理。
 
- HOST-SUFFIX 等同于 DOMAIN-SUFFIX ：匹配请求的域名后缀
+    HOST-SUFFIX 等同于 DOMAIN-SUFFIX ：匹配请求的域名后缀
 
- 例如：HOST-SUFFIX，image.instagram.com，Proxy 匹配域名后缀为：image.instagram.com的域名，走代理。
+    例如：HOST-SUFFIX，image.instagram.com，Proxy 匹配域名后缀为：image.instagram.com的域名，走代理。
 
- HOST-KEYWORD 等同于 DOMAIN-KEYWORD：匹配域名中包含的关键字。
+    HOST-KEYWORD 等同于 DOMAIN-KEYWORD：匹配域名中包含的关键字。
 
- 例如：DOMAIN-KEYWORD， instagram， Proxy 匹配包含 instagram 关键词的域名，走代理。
+    例如：DOMAIN-KEYWORD， instagram， Proxy 匹配包含 instagram 关键词的域名，走代理。
 
- IP-CIDR：匹配处在给定域内的 IP。
+    IP-CIDR：匹配处在给定域内的 IP。
 
- 例如 IP-CIDR， 17.0.0.0/8， Proxy 匹配IP域17.0.0.0/8 走代理。
+    例如 IP-CIDR， 17.0.0.0/8， Proxy 匹配IP域17.0.0.0/8 走代理。
 
- GEOIP： 匹配给定地理区域内的 IP。
+    GEOIP： 匹配给定地理区域内的 IP。
 
- 例如 GEOIP， CN， DIRECT 匹配中国IP走直连。
+    例如 GEOIP， CN， DIRECT 匹配中国IP走直连。
 
- USER-AGENT：特殊字符串头匹配（可以理解为应用名）。
+    USER-AGENT：特殊字符串头匹配（可以理解为应用名）。
 
- 例如：USER-AGENT，QQ*，DIRETC 匹配应用名包含QQ关键字的应用，走直连。
+    例如：USER-AGENT，QQ*，DIRETC 匹配应用名包含QQ关键字的应用，走直连。
 
 
- **Q**：Quantumult内置的基本策略有什么，出站方式有什么？
+* **Q**：Quantumult内置的基本策略有什么，出站方式有什么？
 
- **A**：Quantumult内置了三种基本策略
+    **A**：Quantumult内置了三种基本策略
 
- PROXY：走代理服务器
+    PROXY：走代理服务器
 
- DIRECT：直接连接
+    DIRECT：直接连接
 
- REJECT：拒绝访问
+    REJECT：拒绝访问
 
- Quantumult的出站方式有三种
+    Quantumult的出站方式有三种
 
- GLOBAL：全部出站流量走代理服务器，不管你规则怎么写都会走代理服务器。
+    GLOBAL：全部出站流量走代理服务器，不管你规则怎么写都会走代理服务器。
 
- AUTO：出站流量按照规则配置自动规划出站路径。
+    AUTO：出站流量按照规则配置自动规划出站路径。
 
- DIRECT：全部出站流量走直接连接，不管你规则怎么写都会走直接连接。
+    DIRECT：全部出站流量走直接连接，不管你规则怎么写都会走直接连接。
 
- **Q**：Quantumult的策略组都是什么含义？
+* **Q**：Quantumult的策略组都是什么含义？
 
- **A**：Service Set Identifier Policy：此组可以给Wi-Fi和流量指定不同的策略(可以是静态策略，也可以是节点测速)或节点或者内置基础策略(PROXY DIRECT REJECT)。也可以针对不同的Wi-Fi SSID名称指定不同配置方式。
+     **A**：Service Set Identifier Policy：此组可以给Wi-Fi和流量指定不同的策略(可以是静态策略，也可以是节点测速)或节点或者内置基础策略(PROXY DIRECT REJECT)。也可以针对不同的Wi-Fi SSID名称指定不同配置方式。
 
- Latency Policy：此组是节点测速分组，可以选择多个节点，根据测速结果选择ping值最低的节点使用(注意Latency Policy并不能检测节点带宽,只能检测节点ping值,建立此组时请根据自身节点实际情况自行添加)。
+    Latency Policy：此组是节点测速分组，可以选择多个节点，根据测速结果选择ping值最低的节点使用(注意Latency Policy并不能检测节点带宽,只能检测节点ping值,建立此组时请根据自身节点实际情况自行添加)。
 
- Static Policy：此组是静态策略分组，可以选择 SSID分组 Auto分组或者任意节点，也可以选择内置基础策略(PROXY DIRECT REJECT)。使用时，手动选择需要的策略即可。
+     Static Policy：此组是静态策略分组，可以选择 SSID分组 Auto分组或者任意节点，也可以选择内置基础策略(PROXY DIRECT REJECT)。使用时，手动选择需要的策略即可。
 
- 在规则中，可以指定以上三种策略的名称以应对不同的应用场景。
+     在规则中，可以指定以上三种策略的名称以应对不同的应用场景。
 
- **Q**：Quantumult不用策略组能用节点测速么？
+* **Q**：Quantumult不用策略组能用节点测速么？
 
- **A**：可以，Quantumult提供了简易的测速机制，可以在不使用策略组的情况下开启最多10个节点测速并选择最优节点使用。开启方式在Settings→Policy→PROXY→URL Latency Test中配置。这种方式规则中需要走节点服务器的网址配置为PROXY即可，这种配置方式相对简单能满足大部分人的需求，如果不想开启策略组或者对策略组不是很了解的人，推荐使用这种配置方式。
+    **A**：可以，Quantumult提供了简易的测速机制，可以在不使用策略组的情况下开启最多10个节点测速并选择最优节点使用。开启方式在Settings→Policy→PROXY→URL Latency Test中配置。这种方式规则中需要走节点服务器的网址配置为PROXY即可，这种配置方式相对简单能满足大部分人的需求，如果不想开启策略组或者对策略组不是很了解的人，推荐使用这种配置方式。
 
- **Q**:为什么我Quantumult点击启动时会有提示?
+* **Q**:为什么我Quantumult点击启动时会有提示?
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2923.JPG)
+</center>
 
- **A**:这个提示是因为你没有信任证书,可以参考本手册的 **开启MitM(HTTPS)** 章节开启证书信任.
- 还有一种提示是没有安装证书,同样可以在 **开启MitM(HTTPS)** 章节中找到答案.
+   **A**:这个提示是因为你没有信任证书,可以参考本手册的 **开启MitM(HTTPS)** 章节开启证书信任.
+   还有一种提示是没有安装证书,同样可以在 **开启MitM(HTTPS)** 章节中找到答案.
 
 ---
 
@@ -126,7 +128,9 @@
 * 首页 
 
    初次打开Quantumult所显示的页面
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2845.JPG)
+</center>
 
 **本页面各选项卡说明**
 
@@ -143,11 +147,15 @@
 
    添加节点请选择Settings界面 Server选项 如下图所示
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2844.JPG)
+</center>
 
    在Server页面有三种添加节点的方式 下图中红色方框标识的为手动添加 蓝色方框标识的为二维码扫码导入 绿色方框标识的为从URL导入
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2854.JPG)
+</center>
 
    本节主要讲手动添加节点,二维码扫码和URL添加方式相对简单,就不再介绍了。
 
@@ -155,7 +163,9 @@
    
    选择手动添加选项会弹出下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2881.jpg)
+</center>
 
    默认为添加SS节点 
 
@@ -165,13 +175,17 @@
 
    如果想要添加SSR节点,请点击图中的红色方框标识处,点击后会弹出如下界面
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2882.jpg)
+</center>
 
    点击OK进入SSR手动添加界面 点击Cancel留在本页面
 
    添加SSR节点界面如下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2883.jpg)
+</center>
 
    从上往下分别为 接点名 服务器地址 端口号 密码 加密方式 协议类型 混淆类型 协议参数 混淆参数 请根据自己的节点情况自行填写,填写完毕后点击Save保存。
 
@@ -179,17 +193,23 @@
    
    添加节点请选择Settings界面 Favorites选项 如下图所示
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2912.JPG)
+</center>
 
    点击图中红色方框标识处会弹出选项,选择需要添加的订阅信息
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2910.JPG)
+</center>
 
    图中绿色方框标出的为添加节点订阅信息 蓝色方框标出的为添加基本规则订阅 红色方框标出的为HTTPS Rejection规则订阅
 
     节点信息订阅 点击Server选项弹出如下画面
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2914.JPG)
+</center>
 
    图中 Name填写名字自己随便填写方便识别即可 URL填写节点订阅链接(请咨询你的服务商)
 
@@ -207,17 +227,23 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的节点订阅信息,在订阅信息上向左滑动会有如下提示
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2899.JPG)
+</center>
 
    图中Remove Server为从本地移除该组订阅的所有节点信息 Update为更新或添加节点订阅 Delete为删除本条订阅(删除本条订阅不会删除已经订阅的节点信息)
 
    选择Update订阅节点信息,成功后会弹出如下提示,至此节点订阅完成.
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)
+</center>
 
     基础规则订阅 点击Filter选项弹出如下画面
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2915.JPG)
+</center>
 
    图中 Name填写订阅名称方便识别即可 URL添加规则地址
 
@@ -235,19 +261,25 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的规则订阅信息,在订阅信息上向左滑动会有如下提示
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2909.JPG)
+</center>
 
    图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
    
    选择Replace会弹出如下图片
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2913.JPG)
+</center>
 
    图中选项请根据自己的实际情况选择,选择好后点击OK,至此基础规则添加完毕.
 
     HTTPS Rejection订阅 点击Rejection选项弹出如下画面
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2916.JPG)
+</center>
 
    图中 Name填写订阅名称方便识别即可 URL添加规则地址
 
@@ -264,37 +296,51 @@
 
    保存完毕后,在Favorites页面会出现你刚才命名过的Rejection订阅信息,在订阅信息上向左滑动会有如下提示
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2908.JPG)
+</center>
 
    图中Append为添加规则(及订阅规则与本地规则合并) Replace为替换规则(及替换本地规则为订阅规则) Delete为删除本条订阅信息
    
    选择Replace 完成后会弹出如下图片,至此Rejection订阅完毕.
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG)    
+</center>
 
 * 开启MitM(HTTPS)
 
    选择Settings页面的HTTPS选项卡下图红色方框标出部分
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2839.JPG) 
+</center>
 
    选择后会弹出如下画面
 
 未创建证书如下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2920.JPG)
+</center>
 
 已创建未安装证书如下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2919.JPG)
+</center>
 
 已安装未信任证书如下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2921.JPG)
+</center>
 
 已安装证书并信任如下图
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2867.JPG)
+</center>
 
    图中红色方框标识处显示当前是否安装并信任了HTTPS证书,我的这个已经安装过了显示的是Root CA Installed&Trusted. 如果是没有安装的话这个地方显示不太一样,下面我讲一下如何安装和信任证书.
 
@@ -308,7 +354,9 @@
 
    信任证书 依次点击手机设置 通用 关于本机 证书信任设置 选择你的证书信任即可
 
+<center>
 ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2922.JPG)
+</center>
 
 **注意如果你已经创建了证书并安装,请不要再次点击创建证书,重新创建一个证书原来的证书会失效**
 
@@ -318,12 +366,15 @@
 
     点击P12-passphraes复制Surge证书的ca-passphraes编号到这里
 
-   ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2917.JPG)
+<center>
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2917.JPG)
+</center>
 
     然后点击P12复制Surge证书的ca-p12到这里
 
-   ![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG)
-   
+<center>
+![](https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG)
+</center>   
 
    
 
