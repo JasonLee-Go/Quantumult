@@ -278,7 +278,7 @@
    
    选择Replace 完成后会弹出如下图片,至此Rejection订阅完毕.
 
-<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2907.JPG"/></div>
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2906.JPG"/></div>
 
 * 开启MitM(HTTPS)
 
