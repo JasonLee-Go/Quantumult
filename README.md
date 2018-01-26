@@ -18,6 +18,12 @@
     * 订阅及更新规则
     * 订阅及更新Rejection
     * 开启MitM
+* [4.进阶教程](#进阶教程)
+    * Policy介绍与配置
+    * 切换节点(暂未添加)
+    * 规则分流(暂未添加)
+    * 查看节点生效情况(暂未添加)
+    * 服务器ping测试(暂未添加)
     
 ---
 
@@ -326,4 +332,90 @@
 
 <div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2918.JPG"/></div>
 
+### 进阶教程
 
+* Policy介绍与配置
+  
+   Quantumult里有四种不同的Policy(策略组)
+
+    PROXY Latency Test(默认分组URL Test,在默认PROXY中选择不同的节点进行URL Test选取ping值最低的节点使用.此分组最多只能添加10个节点.)此分组的好处在于,处于测试间隔期间你可以手动选择任何节点使用,到下一次测速周期到来会切换回测速ping值最低的节点.
+    
+    SSID Policy (SSID策略,可以根据不同的SSID名称选择不同代理方式,直连 拒绝 单独节点 Latency Policy 或 Static Policy)
+
+    Latency Policy (独立URL Test分组,与PROXY Latency Test的机制类似,但是在这个分组中不限制节点数量)此分组不能手动选择节点,只能自动选择Ping值最低的节点使用.
+
+    Static Policy(静态分组,此分组可以添加所有的策略方式,但是在使用时需要手动切换,此分组的主要作用是在不更改配置文件的情况下切换部分网站的代理方式)
+
+   Policy配置实例
+   
+   **PROXY Latency Test配置**
+   
+   点击Settings页面 Policy选项进入配置页面
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2926.JPG"/></div>
+
+   选择红色方框所标识的选项卡,弹出配置界面
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2930.JPG"/></div>
+
+   点击开关,开始配置,选择好节点后点击Save保存
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2928.JPG"/></div>
+
+   **SSID Policy配置**
+
+   在Policy页面点击右上角的➕会弹出配置选项,选择下图中红色方框标示处即可
+    
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2929.JPG"/></div>
+
+   进入配置页面后,填写策略名称,然后选择对应的策略.(此策略组可选内置策略(DIRECT REJECT PROXY) Latency Policy 或者 Static Policy 或单独节点)
+
+   Wi-Fi对应在SSID列表以外的无线网络下该策略组走哪个策略
+
+   Celluar对应的是在蜂窝网络环境下该策略组走哪个策略
+
+   点击下方Add SSID Action按钮,会弹出对话框让你填写Wi-Fi名称(默认是你当前已经连接的Wi-Fi名称),填写好后,选择策略即可.(可以添加多个SSID名称)
+
+   配置好后点击Save保存.
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2925.JPG"/></div>
+
+   **Latency Policy**
+
+   在Policy页面点击右上角的➕会弹出配置选项,选择下图中蓝色方框标示处即可
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2931.JPG"/></div>
+
+   进入配置页面后,填写策略名称,然后点击Add Server添加需要的服务器节点即可.
+
+   配置好后点击Save保存.
+
+   **Static Policy配置**
+
+   在Policy页面点击右上角的➕会弹出配置选项,选择下图中绿色方框标示处即可
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2932.JPG"/></div>   
+
+   
+   进入配置页面后,填写策略名称,然后点击Add Policy OR Server添加需要的策略或服务器节点.(此策略组可选内置策略(DIRECT REJECT PROXY) Latency Policy 或者 Static Policy 或 单独节点 或 SSID Policy)
+   
+   配置好后点击Save保存.
+
+**使用策略**
+
+   当你所需要的策略配置完成以后,你需要配置规则列表使策略组生效.
+
+   如果使用PROXY Latency Test那么你的规则列表中代理选项需要选PROXY.
+
+   如果使用其它Policy那么你的规则列表中的代理选项需要选择成相应的策略名.
+
+   替换规则可以使用规则订阅列表Replace替换也可以在Settings页面Filter选项卡里替换.
+
+   在Filter中替换方法为点击进入Filter列表,点击下图中红色方框标识出,弹出替换选项
+
+<div align=center><img src="https://raw.githubusercontent.com/JasonLee-Go/Quantumult/master/IMG_2933.JPG"/></div>  
+
+   在Old Action处填写原来的策略名称,New Action处填写新的策略名称,然后点击OK,替换完成会弹出提示.替换好后,新的策略方式生效.
+
+
+   
